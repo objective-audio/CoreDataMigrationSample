@@ -9,11 +9,35 @@
 /* Begin PBXBuildFile section */
 		B66848961D16456F00547947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848951D16456F00547947 /* main.m */; };
 		B66848991D16456F00547947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848981D16456F00547947 /* AppDelegate.m */; };
-		B668489C1D16456F00547947 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B668489B1D16456F00547947 /* ViewController.m */; };
 		B668489F1D16456F00547947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B668489D1D16456F00547947 /* Main.storyboard */; };
 		B66848A11D16456F00547947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66848A01D16456F00547947 /* Assets.xcassets */; };
 		B66848A41D16456F00547947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66848A21D16456F00547947 /* LaunchScreen.storyboard */; };
 		B66848AF1D16456F00547947 /* CoreDataMigrationSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848AE1D16456F00547947 /* CoreDataMigrationSampleTests.m */; };
+		B66848C61D16467A00547947 /* NSFetchedResultsController+UBICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848BB1D16467A00547947 /* NSFetchedResultsController+UBICoreData.m */; };
+		B66848C71D16467A00547947 /* NSFetchRequest+UBICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848BD1D16467A00547947 /* NSFetchRequest+UBICoreData.m */; };
+		B66848C81D16467A00547947 /* NSManagedObject+UBICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848BF1D16467A00547947 /* NSManagedObject+UBICoreData.m */; };
+		B66848C91D16467A00547947 /* NSManagedObjectContext+UBICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848C11D16467A00547947 /* NSManagedObjectContext+UBICoreData.m */; };
+		B66848CA1D16467A00547947 /* UBICoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848C51D16467A00547947 /* UBICoreDataStore.m */; };
+		B66848D01D1649B800547947 /* CDMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848CF1D1649B800547947 /* CDMSetupViewController.m */; };
+		B66848D31D164AFF00547947 /* CDMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848D21D164AFF00547947 /* CDMMenuViewController.m */; };
+		B66848D61D164BBC00547947 /* CDMLightweightMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848D51D164BBC00547947 /* CDMLightweightMigrationController.m */; };
+		B66848D91D164BC700547947 /* CDMCustomMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848D81D164BC700547947 /* CDMCustomMigrationController.m */; };
+		B66848DF1D164C2A00547947 /* CDMMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848DE1D164C2A00547947 /* CDMMigrationController.m */; };
+		B66848E21D16501400547947 /* CDMJoin.m in Sources */ = {isa = PBXBuildFile; fileRef = B66848E11D16501400547947 /* CDMJoin.m */; };
+		B6C215DE1D165ADB00A8ECA7 /* CDMMigrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215DD1D165ADB00A8ECA7 /* CDMMigrationViewController.m */; };
+		B6C215E01D165DD700A8ECA7 /* CDMTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215DF1D165DD700A8ECA7 /* CDMTypes.m */; };
+		B6C215E31D166DA600A8ECA7 /* CDMEntitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215E21D166DA600A8ECA7 /* CDMEntitiesViewController.m */; };
+		B6C215E61D166E1800A8ECA7 /* CDMObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215E51D166E1800A8ECA7 /* CDMObjectsViewController.m */; };
+		B6C215E91D166E3200A8ECA7 /* CDMObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215E81D166E3200A8ECA7 /* CDMObjectViewController.m */; };
+		B6C215EC1D16A31E00A8ECA7 /* CDMDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C215EB1D16A31E00A8ECA7 /* CDMDataController.m */; };
+		B6C215F01D16B09800A8ECA7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6C215EE1D16B09800A8ECA7 /* Model.xcdatamodeld */; };
+		B6DF339E1D177D1800979651 /* Model1-2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = B6DF339D1D177D1800979651 /* Model1-2.xcmappingmodel */; };
+		B6DF33A11D177F1200979651 /* CDMFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33A01D177F1200979651 /* CDMFileUtils.m */; };
+		B6DF33A41D182FC900979651 /* CDMSeparateMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33A31D182FC900979651 /* CDMSeparateMigrationController.m */; };
+		B6DF33AE1D1832C800979651 /* CDMEntityAMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33AD1D1832C800979651 /* CDMEntityAMigrationPolicy.m */; };
+		B6DF33B11D1832E900979651 /* CDMEntityBMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33B01D1832E900979651 /* CDMEntityBMigrationPolicy.m */; };
+		B6DF33B41D18D6AD00979651 /* CDMMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33B31D18D6AD00979651 /* CDMMigrationManager.m */; };
+		B6DF33B71D18FDC200979651 /* CDMMigrationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DF33B61D18FDC200979651 /* CDMMigrationUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +55,6 @@
 		B66848951D16456F00547947 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B66848971D16456F00547947 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B66848981D16456F00547947 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B668489A1D16456F00547947 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B668489B1D16456F00547947 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B668489E1D16456F00547947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B66848A01D16456F00547947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66848A31D16456F00547947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +62,58 @@
 		B66848AA1D16456F00547947 /* CoreDataMigrationSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataMigrationSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66848AE1D16456F00547947 /* CoreDataMigrationSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataMigrationSampleTests.m; sourceTree = "<group>"; };
 		B66848B01D16456F00547947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66848BA1D16467A00547947 /* NSFetchedResultsController+UBICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+UBICoreData.h"; sourceTree = "<group>"; };
+		B66848BB1D16467A00547947 /* NSFetchedResultsController+UBICoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+UBICoreData.m"; sourceTree = "<group>"; };
+		B66848BC1D16467A00547947 /* NSFetchRequest+UBICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+UBICoreData.h"; sourceTree = "<group>"; };
+		B66848BD1D16467A00547947 /* NSFetchRequest+UBICoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+UBICoreData.m"; sourceTree = "<group>"; };
+		B66848BE1D16467A00547947 /* NSManagedObject+UBICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+UBICoreData.h"; sourceTree = "<group>"; };
+		B66848BF1D16467A00547947 /* NSManagedObject+UBICoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+UBICoreData.m"; sourceTree = "<group>"; };
+		B66848C01D16467A00547947 /* NSManagedObjectContext+UBICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+UBICoreData.h"; sourceTree = "<group>"; };
+		B66848C11D16467A00547947 /* NSManagedObjectContext+UBICoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+UBICoreData.m"; sourceTree = "<group>"; };
+		B66848C21D16467A00547947 /* UBICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBICoreData.h; sourceTree = "<group>"; };
+		B66848C31D16467A00547947 /* UBICoreDataCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBICoreDataCommon.h; sourceTree = "<group>"; };
+		B66848C41D16467A00547947 /* UBICoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBICoreDataStore.h; sourceTree = "<group>"; };
+		B66848C51D16467A00547947 /* UBICoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBICoreDataStore.m; sourceTree = "<group>"; };
+		B66848CE1D1649B800547947 /* CDMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMSetupViewController.h; sourceTree = "<group>"; };
+		B66848CF1D1649B800547947 /* CDMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMSetupViewController.m; sourceTree = "<group>"; };
+		B66848D11D164AFF00547947 /* CDMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMMenuViewController.h; sourceTree = "<group>"; };
+		B66848D21D164AFF00547947 /* CDMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMMenuViewController.m; sourceTree = "<group>"; };
+		B66848D41D164BBC00547947 /* CDMLightweightMigrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMLightweightMigrationController.h; sourceTree = "<group>"; };
+		B66848D51D164BBC00547947 /* CDMLightweightMigrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMLightweightMigrationController.m; sourceTree = "<group>"; };
+		B66848D71D164BC700547947 /* CDMCustomMigrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMCustomMigrationController.h; sourceTree = "<group>"; };
+		B66848D81D164BC700547947 /* CDMCustomMigrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMCustomMigrationController.m; sourceTree = "<group>"; };
+		B66848DD1D164C2A00547947 /* CDMMigrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMMigrationController.h; sourceTree = "<group>"; };
+		B66848DE1D164C2A00547947 /* CDMMigrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMMigrationController.m; sourceTree = "<group>"; };
+		B66848E01D16501400547947 /* CDMJoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMJoin.h; sourceTree = "<group>"; };
+		B66848E11D16501400547947 /* CDMJoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMJoin.m; sourceTree = "<group>"; };
+		B66848E61D1650BD00547947 /* CDMTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDMTypes.h; sourceTree = "<group>"; };
+		B6C215DC1D165ADB00A8ECA7 /* CDMMigrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMMigrationViewController.h; sourceTree = "<group>"; };
+		B6C215DD1D165ADB00A8ECA7 /* CDMMigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMMigrationViewController.m; sourceTree = "<group>"; };
+		B6C215DF1D165DD700A8ECA7 /* CDMTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMTypes.m; sourceTree = "<group>"; };
+		B6C215E11D166DA600A8ECA7 /* CDMEntitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMEntitiesViewController.h; sourceTree = "<group>"; };
+		B6C215E21D166DA600A8ECA7 /* CDMEntitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMEntitiesViewController.m; sourceTree = "<group>"; };
+		B6C215E41D166E1800A8ECA7 /* CDMObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMObjectsViewController.h; sourceTree = "<group>"; };
+		B6C215E51D166E1800A8ECA7 /* CDMObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMObjectsViewController.m; sourceTree = "<group>"; };
+		B6C215E71D166E3200A8ECA7 /* CDMObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMObjectViewController.h; sourceTree = "<group>"; };
+		B6C215E81D166E3200A8ECA7 /* CDMObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMObjectViewController.m; sourceTree = "<group>"; };
+		B6C215EA1D16A31E00A8ECA7 /* CDMDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMDataController.h; sourceTree = "<group>"; };
+		B6C215EB1D16A31E00A8ECA7 /* CDMDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMDataController.m; sourceTree = "<group>"; };
+		B6C215EF1D16B09800A8ECA7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B6C215F41D16E06D00A8ECA7 /* Model 1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 1.xcdatamodel"; sourceTree = "<group>"; };
+		B6C215F51D16E07C00A8ECA7 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		B6DF339D1D177D1800979651 /* Model1-2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model1-2.xcmappingmodel"; sourceTree = "<group>"; };
+		B6DF339F1D177F1200979651 /* CDMFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMFileUtils.h; sourceTree = "<group>"; };
+		B6DF33A01D177F1200979651 /* CDMFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMFileUtils.m; sourceTree = "<group>"; };
+		B6DF33A21D182FC900979651 /* CDMSeparateMigrationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMSeparateMigrationController.h; sourceTree = "<group>"; };
+		B6DF33A31D182FC900979651 /* CDMSeparateMigrationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMSeparateMigrationController.m; sourceTree = "<group>"; };
+		B6DF33AC1D1832C800979651 /* CDMEntityAMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMEntityAMigrationPolicy.h; sourceTree = "<group>"; };
+		B6DF33AD1D1832C800979651 /* CDMEntityAMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMEntityAMigrationPolicy.m; sourceTree = "<group>"; };
+		B6DF33AF1D1832E900979651 /* CDMEntityBMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMEntityBMigrationPolicy.h; sourceTree = "<group>"; };
+		B6DF33B01D1832E900979651 /* CDMEntityBMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMEntityBMigrationPolicy.m; sourceTree = "<group>"; };
+		B6DF33B21D18D6AD00979651 /* CDMMigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMMigrationManager.h; sourceTree = "<group>"; };
+		B6DF33B31D18D6AD00979651 /* CDMMigrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMMigrationManager.m; sourceTree = "<group>"; };
+		B6DF33B51D18FDC200979651 /* CDMMigrationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMMigrationUtils.h; sourceTree = "<group>"; };
+		B6DF33B61D18FDC200979651 /* CDMMigrationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMMigrationUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +157,11 @@
 			children = (
 				B66848971D16456F00547947 /* AppDelegate.h */,
 				B66848981D16456F00547947 /* AppDelegate.m */,
-				B668489A1D16456F00547947 /* ViewController.h */,
-				B668489B1D16456F00547947 /* ViewController.m */,
+				B66848B91D16467A00547947 /* UBICoreData */,
+				B6C215ED1D16B08700A8ECA7 /* CoreDataMigration */,
+				B6DF33B81D1906AE00979651 /* Utils */,
+				B66848E31D16501F00547947 /* Controllers */,
+				B66848E41D16503700547947 /* ViewControllers */,
 				B668489D1D16456F00547947 /* Main.storyboard */,
 				B66848A01D16456F00547947 /* Assets.xcassets */,
 				B66848A21D16456F00547947 /* LaunchScreen.storyboard */,
@@ -109,6 +186,92 @@
 				B66848B01D16456F00547947 /* Info.plist */,
 			);
 			path = CoreDataMigrationSampleTests;
+			sourceTree = "<group>";
+		};
+		B66848B91D16467A00547947 /* UBICoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B66848BA1D16467A00547947 /* NSFetchedResultsController+UBICoreData.h */,
+				B66848BB1D16467A00547947 /* NSFetchedResultsController+UBICoreData.m */,
+				B66848BC1D16467A00547947 /* NSFetchRequest+UBICoreData.h */,
+				B66848BD1D16467A00547947 /* NSFetchRequest+UBICoreData.m */,
+				B66848BE1D16467A00547947 /* NSManagedObject+UBICoreData.h */,
+				B66848BF1D16467A00547947 /* NSManagedObject+UBICoreData.m */,
+				B66848C01D16467A00547947 /* NSManagedObjectContext+UBICoreData.h */,
+				B66848C11D16467A00547947 /* NSManagedObjectContext+UBICoreData.m */,
+				B66848C21D16467A00547947 /* UBICoreData.h */,
+				B66848C31D16467A00547947 /* UBICoreDataCommon.h */,
+				B66848C41D16467A00547947 /* UBICoreDataStore.h */,
+				B66848C51D16467A00547947 /* UBICoreDataStore.m */,
+			);
+			name = UBICoreData;
+			path = ../../UBICoreData/UBICoreData;
+			sourceTree = "<group>";
+		};
+		B66848E31D16501F00547947 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6C215EA1D16A31E00A8ECA7 /* CDMDataController.h */,
+				B6C215EB1D16A31E00A8ECA7 /* CDMDataController.m */,
+				B66848DD1D164C2A00547947 /* CDMMigrationController.h */,
+				B66848DE1D164C2A00547947 /* CDMMigrationController.m */,
+				B66848D41D164BBC00547947 /* CDMLightweightMigrationController.h */,
+				B66848D51D164BBC00547947 /* CDMLightweightMigrationController.m */,
+				B66848D71D164BC700547947 /* CDMCustomMigrationController.h */,
+				B66848D81D164BC700547947 /* CDMCustomMigrationController.m */,
+				B6DF33A21D182FC900979651 /* CDMSeparateMigrationController.h */,
+				B6DF33A31D182FC900979651 /* CDMSeparateMigrationController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B66848E41D16503700547947 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B66848D11D164AFF00547947 /* CDMMenuViewController.h */,
+				B66848D21D164AFF00547947 /* CDMMenuViewController.m */,
+				B66848CE1D1649B800547947 /* CDMSetupViewController.h */,
+				B66848CF1D1649B800547947 /* CDMSetupViewController.m */,
+				B6C215DC1D165ADB00A8ECA7 /* CDMMigrationViewController.h */,
+				B6C215DD1D165ADB00A8ECA7 /* CDMMigrationViewController.m */,
+				B6C215E11D166DA600A8ECA7 /* CDMEntitiesViewController.h */,
+				B6C215E21D166DA600A8ECA7 /* CDMEntitiesViewController.m */,
+				B6C215E41D166E1800A8ECA7 /* CDMObjectsViewController.h */,
+				B6C215E51D166E1800A8ECA7 /* CDMObjectsViewController.m */,
+				B6C215E71D166E3200A8ECA7 /* CDMObjectViewController.h */,
+				B6C215E81D166E3200A8ECA7 /* CDMObjectViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6C215ED1D16B08700A8ECA7 /* CoreDataMigration */ = {
+			isa = PBXGroup;
+			children = (
+				B6C215EE1D16B09800A8ECA7 /* Model.xcdatamodeld */,
+				B6DF339D1D177D1800979651 /* Model1-2.xcmappingmodel */,
+				B6DF33AC1D1832C800979651 /* CDMEntityAMigrationPolicy.h */,
+				B6DF33AD1D1832C800979651 /* CDMEntityAMigrationPolicy.m */,
+				B6DF33AF1D1832E900979651 /* CDMEntityBMigrationPolicy.h */,
+				B6DF33B01D1832E900979651 /* CDMEntityBMigrationPolicy.m */,
+				B6DF33B21D18D6AD00979651 /* CDMMigrationManager.h */,
+				B6DF33B31D18D6AD00979651 /* CDMMigrationManager.m */,
+			);
+			name = CoreDataMigration;
+			sourceTree = "<group>";
+		};
+		B6DF33B81D1906AE00979651 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B66848E61D1650BD00547947 /* CDMTypes.h */,
+				B6C215DF1D165DD700A8ECA7 /* CDMTypes.m */,
+				B66848E01D16501400547947 /* CDMJoin.h */,
+				B66848E11D16501400547947 /* CDMJoin.m */,
+				B6DF339F1D177F1200979651 /* CDMFileUtils.h */,
+				B6DF33A01D177F1200979651 /* CDMFileUtils.m */,
+				B6DF33B51D18FDC200979651 /* CDMMigrationUtils.h */,
+				B6DF33B61D18FDC200979651 /* CDMMigrationUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +374,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B668489C1D16456F00547947 /* ViewController.m in Sources */,
+				B6DF339E1D177D1800979651 /* Model1-2.xcmappingmodel in Sources */,
+				B66848E21D16501400547947 /* CDMJoin.m in Sources */,
+				B66848C81D16467A00547947 /* NSManagedObject+UBICoreData.m in Sources */,
+				B66848D31D164AFF00547947 /* CDMMenuViewController.m in Sources */,
+				B6DF33A11D177F1200979651 /* CDMFileUtils.m in Sources */,
 				B66848991D16456F00547947 /* AppDelegate.m in Sources */,
 				B66848961D16456F00547947 /* main.m in Sources */,
+				B66848D01D1649B800547947 /* CDMSetupViewController.m in Sources */,
+				B66848D91D164BC700547947 /* CDMCustomMigrationController.m in Sources */,
+				B6C215F01D16B09800A8ECA7 /* Model.xcdatamodeld in Sources */,
+				B6C215E31D166DA600A8ECA7 /* CDMEntitiesViewController.m in Sources */,
+				B6DF33AE1D1832C800979651 /* CDMEntityAMigrationPolicy.m in Sources */,
+				B6C215E61D166E1800A8ECA7 /* CDMObjectsViewController.m in Sources */,
+				B66848C91D16467A00547947 /* NSManagedObjectContext+UBICoreData.m in Sources */,
+				B6C215E91D166E3200A8ECA7 /* CDMObjectViewController.m in Sources */,
+				B6DF33B11D1832E900979651 /* CDMEntityBMigrationPolicy.m in Sources */,
+				B6DF33A41D182FC900979651 /* CDMSeparateMigrationController.m in Sources */,
+				B66848D61D164BBC00547947 /* CDMLightweightMigrationController.m in Sources */,
+				B6DF33B71D18FDC200979651 /* CDMMigrationUtils.m in Sources */,
+				B6C215EC1D16A31E00A8ECA7 /* CDMDataController.m in Sources */,
+				B66848CA1D16467A00547947 /* UBICoreDataStore.m in Sources */,
+				B6DF33B41D18D6AD00979651 /* CDMMigrationManager.m in Sources */,
+				B66848C71D16467A00547947 /* NSFetchRequest+UBICoreData.m in Sources */,
+				B6C215DE1D165ADB00A8ECA7 /* CDMMigrationViewController.m in Sources */,
+				B66848DF1D164C2A00547947 /* CDMMigrationController.m in Sources */,
+				B66848C61D16467A00547947 /* NSFetchedResultsController+UBICoreData.m in Sources */,
+				B6C215E01D165DD700A8ECA7 /* CDMTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +591,7 @@
 				B66848B51D16456F00547947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B66848B61D16456F00547947 /* Build configuration list for PBXNativeTarget "CoreDataMigrationSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -412,8 +600,24 @@
 				B66848B81D16456F00547947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B6C215EE1D16B09800A8ECA7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6C215F51D16E07C00A8ECA7 /* Model 2.xcdatamodel */,
+				B6C215F41D16E06D00A8ECA7 /* Model 1.xcdatamodel */,
+				B6C215EF1D16B09800A8ECA7 /* Model.xcdatamodel */,
+			);
+			currentVersion = B6C215F51D16E07C00A8ECA7 /* Model 2.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B66848891D16456F00547947 /* Project object */;
 }
