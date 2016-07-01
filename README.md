@@ -1,1 +1,3 @@
 # CoreDataMigrationSample
+
+CoreDataのマイグレーションを分割して実行するサンプルです。
