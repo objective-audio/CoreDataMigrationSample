@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F91DCED26BEF7876354FE180D768B58961C2D926",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F91DCED26BEF7876354FE180D768B58961C2D926" : 0,
+    "A2D791C9795DD27D205BD4D9598C377D1D4BBB53" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C66C2959-94FB-4EF5-AA68-1A669E4D47E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F91DCED26BEF7876354FE180D768B58961C2D926" : "CoreDataMigrationSample\/",
+    "A2D791C9795DD27D205BD4D9598C377D1D4BBB53" : "CoreDataMigrationSample\/UBICoreData\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CoreDataMigrationSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CoreDataMigrationSample\/CoreDataMigrationSample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ubiregiinc\/UBICoreData.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A2D791C9795DD27D205BD4D9598C377D1D4BBB53"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:objective-audio\/CoreDataMigrationSample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F91DCED26BEF7876354FE180D768B58961C2D926"
+    }
+  ]
+}

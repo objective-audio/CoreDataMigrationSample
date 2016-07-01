@@ -1,0 +1,3 @@
+[submodule "UBICoreData"]
+	path = UBICoreData
+	url = https://github.com/ubiregiinc/UBICoreData.git
