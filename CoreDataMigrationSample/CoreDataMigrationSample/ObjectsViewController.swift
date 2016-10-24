@@ -47,11 +47,18 @@ class ObjectsViewController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(ObjectsViewController.ObjectsCellIdentifier, forIndexPath: indexPath)
-        if let object = fetchResultsController.fetchedObjects?[indexPath.row], name = object.valueForKey(NameKey) as? String, group = object.valueForKey(GroupKey) as? NSNumber {
-            cell.textLabel?.text = "Name=\(name) Group=\(group)"
-        } else {
-            cell.textLabel?.text = nil
+        
+        cell.textLabel?.text = nil
+        
+        guard let object = fetchResultsController.fetchedObjects?[indexPath.row] as? NSManagedObject else {
+            return cell
         }
+        
+        guard let name = object.valueForKey(NameKey) as? String, group = object.valueForKey(GroupKey) as? NSNumber else {
+            return cell
+        }
+        
+        cell.textLabel?.text = "Name=\(name) Group=\(group)"
         
         return cell
     }

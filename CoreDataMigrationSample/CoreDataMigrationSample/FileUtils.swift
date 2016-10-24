@@ -4,11 +4,11 @@
 
 struct FileUtils {
     static func sourceStoreURL() -> NSURL {
-        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataSourceStoreFileName)
+        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataSourceStoreFileName)!
     }
     
     static func destinationStoreURL() -> NSURL {
-        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataDestinationStoreFileName)
+        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataDestinationStoreFileName)!
     }
     
     static func documentDirectoryURL() -> NSURL {
@@ -23,7 +23,7 @@ struct FileUtils {
         let fileManager = NSFileManager()
         let contents = try! fileManager.contentsOfDirectoryAtPath(documentDirectoryPath())
         for content in contents {
-            try! fileManager.removeItemAtURL(documentDirectoryURL().URLByAppendingPathComponent(content))
+            try! fileManager.removeItemAtURL(documentDirectoryURL().URLByAppendingPathComponent(content)!)
         }
     }
     
