@@ -5,12 +5,9 @@
 import UIKit
 
 class EntitiesViewController : UITableViewController {
-    static let InformationCellIdentifier: String = "InformationCell"
-    static let EntitiesCellIdentifier: String = "EntitiesCell";
-    
     private enum Section: Int {
-        case Information
-        case Entities
+        case information
+        case entities
         
         static var count: Int {
             return 2
@@ -18,18 +15,18 @@ class EntitiesViewController : UITableViewController {
         
         var cellIdentifier: String {
             switch self {
-            case .Information:
-                return InformationCellIdentifier
-            case .Entities:
-                return EntitiesCellIdentifier
+            case .information:
+                return "InformationCell"
+            case .entities:
+                return "EntitiesCell"
             }
         }
     }
     
     private enum InformationRow: Int {
-        case ModelName
-        case ModelIdentifier
-        case MigrationTime
+        case modelName
+        case modelIdentifier
+        case migrationTime
         
         static var count: Int {
             return 3
@@ -37,11 +34,11 @@ class EntitiesViewController : UITableViewController {
         
         var title: String {
             switch self {
-            case .ModelName:
+            case .modelName:
                 return "Model Name"
-            case .ModelIdentifier:
+            case .modelIdentifier:
                 return "Model Identifier"
-            case .MigrationTime:
+            case .migrationTime:
                 return "Migration Time"
             }
         }
@@ -55,59 +52,60 @@ class EntitiesViewController : UITableViewController {
         self.navigationItem.hidesBackButton = true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let viewController = segue.destinationViewController as? ObjectsViewController, cell = sender as? UITableViewCell {
-            if let indexPath = tableView.indexPathForCell(cell) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? ObjectsViewController, let cell = sender as? UITableViewCell {
+            if let indexPath = tableView.indexPath(for: cell) {
                 viewController.context = dataController.dataStore.mainContext
                 viewController.entityName = dataController.entityName(indexPath.row)
             }
         }
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return Section.count
     }
     
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch Section(rawValue: section)! {
-        case .Information:
+        case .information:
             return "Information"
-        case .Entities:
+        case .entities:
             return "Entities"
         }
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section)! {
-        case .Information:
+        case .information:
             return InformationRow.count
-        case .Entities:
-            return dataController.entityCount()
+        case .entities:
+            return dataController.entityCount
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = Section(rawValue: indexPath.section)!
-        let cell = tableView.dequeueReusableCellWithIdentifier(section.cellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: section.cellIdentifier, for: indexPath)
         
         switch section {
-        case .Information:
+        case .information:
             let row = InformationRow(rawValue: indexPath.row)!
             
             cell.textLabel?.text = row.title
             
             switch row {
-            case .ModelName:
+            case .modelName:
                 cell.detailTextLabel?.text = dataController.dataStore.modelName
-            case .ModelIdentifier:
-                let metaData = dataController.metaData()
-                let identifiers = metaData[NSStoreModelVersionIdentifiersKey]
-                cell.detailTextLabel?.text = identifiers?.componentsJoinedByString("/")
-            case .MigrationTime:
+            case .modelIdentifier:
+                let metaData = dataController.metaData
+                if let identifiers = metaData[NSStoreModelVersionIdentifiersKey] {
+                    cell.detailTextLabel?.text = (identifiers as AnyObject).componentsJoined(by: "/")
+                }
+            case .migrationTime:
                 cell.detailTextLabel?.text = String(format: "%fs", dataController!.migrationTime)
             }
-        case .Entities:
+        case .entities:
             cell.textLabel?.text = dataController.entityName(indexPath.row)
         }
         

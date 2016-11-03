@@ -8,8 +8,8 @@ class Join {
     private var flags: UInt32;
     private let compareFlags: UInt32
     
-    init(count: UInt32, joinedHandler: VoidHandler) {
-        if (count > UInt32(sizeof(UInt32) * 8)) {
+    init(count: UInt32, joinedHandler: @escaping VoidHandler) {
+        if (count > UInt32(MemoryLayout<UInt32>.size * 8)) {
             fatalError()
         }
         
@@ -24,8 +24,8 @@ class Join {
         compareFlags = prepareFlags
     }
     
-    func setFlag(flag: UInt32) {
-        if (flag > UInt32(sizeof(UInt32) * 8)) {
+    func setFlag(_ flag: UInt32) {
+        if (flag > UInt32(MemoryLayout<UInt32>.size * 8)) {
             fatalError()
         }
         

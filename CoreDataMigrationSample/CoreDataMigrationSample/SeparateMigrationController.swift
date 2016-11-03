@@ -3,14 +3,14 @@
 //
 
 class SeparateMigrationController : MigrationController {
-    override func migrate(completion: MigrateCompletionHandler) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+    func migrate(_ completion: @escaping MigrateCompletionHandler) {
+        DispatchQueue.global().async {
             let originalMappingModel = FileUtils.mappingModel(CoreDataModelName, sourceVersion: 1, destinationVersion: 2)
             var mappingModels = [NSMappingModel]()
             
             // EntityA -> EntityB の順番でそれぞれ8分割したMappingModelを生成
             for entityName in [EntityAName, EntityBName] {
-                mappingModels.appendContentsOf(MigrationUtils.mappingModels(entityName, fromMappingModel: originalMappingModel))
+                mappingModels.append(contentsOf: MigrationUtils.mappingModels(entityName, fromMappingModel: originalMappingModel))
             }
             
             let srcModel = FileUtils.model(CoreDataModelName, version: 1)
@@ -22,13 +22,13 @@ class SeparateMigrationController : MigrationController {
             
             // 分割されたMappingModelの数だけマイグレーションを繰り返す
             for mappingModel in mappingModels {
-                autoreleasepool({ 
+                autoreleasepool(invoking: { 
                     let migrationManager = MigrationManager(sourceModel: srcModel, destinationModel: dstModel)
                     do {
-                        try migrationManager.migrateStoreFromURL(FileUtils.sourceStoreURL(),
-                            type: NSSQLiteStoreType,
+                        try migrationManager.migrateStore(from: FileUtils.sourceStoreURL(),
+                            sourceType: NSSQLiteStoreType,
                             options: nil,
-                            withMappingModel: mappingModel,
+                            with: mappingModel,
                             toDestinationURL: FileUtils.destinationStoreURL(),
                             destinationType: NSSQLiteStoreType,
                             destinationOptions: nil)
@@ -45,11 +45,11 @@ class SeparateMigrationController : MigrationController {
             var dataController: DataController?
             
             if success {
-                dataController = DataController(storeURL: FileUtils.destinationStoreURL())
+                dataController = DataController(store: FileUtils.destinationStoreURL())
                 dataController!.migrationTime = CFAbsoluteTimeGetCurrent() - startTime
             }
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            DispatchQueue.main.async(execute: { 
                 completion(dataController)
             })
         }

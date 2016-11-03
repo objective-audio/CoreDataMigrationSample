@@ -3,9 +3,9 @@
 //
 
 class EntityAMigrationPolicy : NSEntityMigrationPolicy {
-    override func createDestinationInstancesForSourceInstance(sInstance: NSManagedObject, entityMapping mapping: NSEntityMapping, manager: NSMigrationManager) throws {
+    override func createDestinationInstances(forSource sInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
         // Destinationにオブジェクトを生成
-        let dInstance = NSEntityDescription.insertNewObjectForEntityForName(EntityAName, inManagedObjectContext: manager.destinationContext)
+        let dInstance = NSEntityDescription.insertNewObject(forEntityName: EntityAName, into: manager.destinationContext)
         
         // SourceのオブジェクトからDestinationのオブジェクトに属性をコピー
         

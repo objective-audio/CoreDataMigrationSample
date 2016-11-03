@@ -3,7 +3,7 @@
 //
 
 struct MigrationUtils {
-    static func mappingModels(entityName: String, fromMappingModel: NSMappingModel) -> [NSMappingModel] {
+    static func mappingModels(_ entityName: String, fromMappingModel: NSMappingModel) -> [NSMappingModel] {
         var mappingModels = [NSMappingModel]()
         
         // "プロジェクト名.マイグレーションポリシー名"で大丈夫か？
@@ -35,12 +35,12 @@ struct MigrationUtils {
         return mappingModels
     }
     
-    static private func sourceExpression(entityName: String, predicate: NSPredicate) -> NSExpression {
+    static private func sourceExpression(_ entityName: String, predicate: NSPredicate) -> NSExpression {
         let entityNameExpression = NSExpression(forConstantValue: entityName)
         let predicateExpression = NSExpression(forConstantValue: predicate)
         let functionExpression = NSExpression(forFunction: NSExpression(format: "$manager"), selectorName: "fetchRequestForSourceEntityNamed:predicate:", arguments: [entityNameExpression, predicateExpression])
         let contextExpression = NSExpression(format: "$manager.sourceContext")
-        return NSFetchRequestExpression.expressionForFetch(functionExpression, context: contextExpression, countOnly: false)
+        return NSFetchRequestExpression.expression(forFetch: functionExpression, context: contextExpression, countOnly: false)
     }
     
     static func copyAttributes(fromSourceInstance sInstance: NSManagedObject, toDestinationInstance dInstance: NSManagedObject, entityMapping: NSEntityMapping) {
@@ -48,7 +48,7 @@ struct MigrationUtils {
         if let mappings = entityMapping.attributeMappings {
             for propertyMapping in mappings {
                 if let name = propertyMapping.name {
-                    if let value = propertyMapping.valueExpression?.expressionValueWithObject(nil, context: ["source": sInstance]) {
+                    if let value = propertyMapping.valueExpression?.expressionValue(with: nil, context: ["source": sInstance]) {
                         dInstance.setValue(value, forKey: name)
                     }
                 }

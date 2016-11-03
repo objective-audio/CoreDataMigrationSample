@@ -3,48 +3,48 @@
 //
 
 struct FileUtils {
-    static func sourceStoreURL() -> NSURL {
-        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataSourceStoreFileName)
+    static func sourceStoreURL() -> URL {
+        return documentDirectoryURL().appendingPathComponent(CoreDataSourceStoreFileName)
     }
     
-    static func destinationStoreURL() -> NSURL {
-        return documentDirectoryURL().URLByAppendingPathComponent(CoreDataDestinationStoreFileName)
+    static func destinationStoreURL() -> URL {
+        return documentDirectoryURL().appendingPathComponent(CoreDataDestinationStoreFileName)
     }
     
-    static func documentDirectoryURL() -> NSURL {
-        return NSURL(fileURLWithPath: documentDirectoryPath())
+    static func documentDirectoryURL() -> URL {
+        return URL(fileURLWithPath: documentDirectoryPath())
     }
     
     static func documentDirectoryPath() -> String {
-        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last!
+        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
     }
     
     static func removeDocumentDirectoryContents() {
-        let fileManager = NSFileManager()
-        let contents = try! fileManager.contentsOfDirectoryAtPath(documentDirectoryPath())
+        let fileManager = FileManager()
+        let contents = try! fileManager.contentsOfDirectory(atPath: documentDirectoryPath())
         for content in contents {
-            try! fileManager.removeItemAtURL(documentDirectoryURL().URLByAppendingPathComponent(content))
+            try! fileManager.removeItem(at: documentDirectoryURL().appendingPathComponent(content))
         }
     }
     
-    static func moveFile(srcURL: NSURL, toURL: NSURL) {
-        let fileManager = NSFileManager()
+    static func moveFile(at srcURL: URL, to dstURL: URL) {
+        let fileManager = FileManager()
         
-        if fileManager.fileExistsAtPath(toURL.path!) {
-            try! fileManager.removeItemAtURL(toURL)
+        if fileManager.fileExists(atPath: dstURL.path) {
+            try! fileManager.removeItem(at: dstURL)
         }
         
-        try! fileManager.moveItemAtURL(srcURL, toURL: toURL)
+        try! fileManager.moveItem(at: srcURL, to: dstURL)
     }
     
-    static func model(name: String, version: UInt) -> NSManagedObjectModel {
+    static func model(_ name: String, version: UInt) -> NSManagedObjectModel {
         let versionString = version < 1 ? "" : " \(version)"
-        let modelURL = NSBundle.mainBundle().URLForResource("\(name).momd/\(name)\(versionString)", withExtension: "mom")
-        return NSManagedObjectModel(contentsOfURL: modelURL!)!
+        let modelURL = Bundle.main.url(forResource: "\(name).momd/\(name)\(versionString)", withExtension: "mom")
+        return NSManagedObjectModel(contentsOf: modelURL!)!
     }
     
-    static func mappingModel(name: String, sourceVersion: UInt, destinationVersion: UInt) -> NSMappingModel {
-        let mappingModelURL = NSBundle.mainBundle().URLForResource("\(name)\(sourceVersion)-\(destinationVersion)", withExtension: "cdm")
-        return NSMappingModel(contentsOfURL: mappingModelURL!)!
+    static func mappingModel(_ name: String, sourceVersion: UInt, destinationVersion: UInt) -> NSMappingModel {
+        let mappingModelURL = Bundle.main.url(forResource: "\(name)\(sourceVersion)-\(destinationVersion)", withExtension: "cdm")
+        return NSMappingModel(contentsOf: mappingModelURL!)!
     }
 }

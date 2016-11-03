@@ -278,9 +278,11 @@
 				TargetAttributes = {
 					B66848901D16456F00547947 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					B66848A91D16456F00547947 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = B66848901D16456F00547947;
 					};
 				};
@@ -491,6 +493,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreDataMigrationSample/CoreDataMigrationSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -504,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.CoreDataMigrationSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreDataMigrationSample/CoreDataMigrationSample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -518,6 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreDataMigrationSampleTests/CoreDataMigrationSampleTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataMigrationSample.app/CoreDataMigrationSample";
 			};
 			name = Debug;
@@ -532,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.CoreDataMigrationSampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreDataMigrationSampleTests/CoreDataMigrationSampleTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataMigrationSample.app/CoreDataMigrationSample";
 			};
 			name = Release;

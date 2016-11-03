@@ -5,8 +5,8 @@
 import UIKit
 
 class MenuViewController : UITableViewController {
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let viewController = segue.destinationViewController as? SetupViewController, identifier = segue.identifier {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? SetupViewController, let identifier = segue.identifier {
             switch identifier {
             case LightweightMigrationSetupSegueIdentifier:
                 viewController.migrationController = LightweightMigrationController()

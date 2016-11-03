@@ -3,9 +3,9 @@
 //
 
 class LightweightMigrationController : MigrationController {
-    override func migrate(completion: MigrateCompletionHandler) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let dataController = DataController(storeURL: FileUtils.sourceStoreURL())
+    func migrate(_ completion: @escaping MigrateCompletionHandler) {
+        DispatchQueue.global().async {
+            let dataController = DataController(store: FileUtils.sourceStoreURL())
             
             let startTime = CFAbsoluteTimeGetCurrent()
             
@@ -13,7 +13,7 @@ class LightweightMigrationController : MigrationController {
             
             dataController.migrationTime = CFAbsoluteTimeGetCurrent() - startTime;
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            DispatchQueue.main.async(execute: { 
                 completion(dataController)
             })
         }

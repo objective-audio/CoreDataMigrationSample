@@ -4,23 +4,28 @@
 
 typealias MigrateCompletionHandler = (DataController?) -> Void
 
-class MigrationController {
-    func setup(completion: VoidHandler) {
+protocol MigrationController {
+    func setup(_ completion: @escaping VoidHandler)
+    func migrate(_ completion: @escaping MigrateCompletionHandler)
+}
+
+extension MigrationController {
+    func setup(_ completion: @escaping VoidHandler) {
         FileUtils.removeDocumentDirectoryContents()
         
         let dataStore = UBICoreDataStore.init(model: FileUtils.model(CoreDataModelName, version: 1),
-                                              storeURL: FileUtils.sourceStoreURL())
+                                              store: FileUtils.sourceStoreURL())
         
-        let privateContext = dataStore.mainContext.newPrivateQueueContext()
+        let privateContext = dataStore.mainContext.newPrivateQueue()
         
-        privateContext.performBlock { 
+        privateContext.perform {
             for i : UInt in 0..<10000 {
-                let objectA = NSEntityDescription.insertNewObjectForEntityForName(EntityAName, inManagedObjectContext: privateContext)
-                objectA.setValue(NSNumber(unsignedInteger: i % MigrationGroupCount), forKey: GroupKey)
+                let objectA = NSEntityDescription.insertNewObject(forEntityName: EntityAName, into: privateContext)
+                objectA.setValue(NSNumber(value: i % MigrationGroupCount as UInt), forKey: GroupKey)
                 objectA.setValue(String(format: "A-%05u", i), forKey: NameKey)
                 
-                let objectB = NSEntityDescription.insertNewObjectForEntityForName(EntityBName, inManagedObjectContext: privateContext)
-                objectB.setValue(NSNumber(unsignedInteger: i % MigrationGroupCount), forKey: GroupKey)
+                let objectB = NSEntityDescription.insertNewObject(forEntityName: EntityBName, into: privateContext)
+                objectB.setValue(NSNumber(value: i % MigrationGroupCount as UInt), forKey: GroupKey)
                 objectB.setValue(String(format: "B-%05u", i), forKey: NameKey)
                 
                 objectA.setValue(objectB, forKey: RelationshipKey)
@@ -34,13 +39,9 @@ class MigrationController {
             privateContext.saveToPersistentStore()
             privateContext.reset()
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue(), { 
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
                 completion()
             })
         }
-    }
-    
-    func migrate(completion: MigrateCompletionHandler) {
-        fatalError("Must be overridden")
     }
 }
